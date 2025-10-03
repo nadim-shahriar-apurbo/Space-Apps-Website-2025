@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   <!--======== META TAGS ========-->
+   <meta charset="UTF-8">
+   <meta http-equiv="X-UA-Compatible" content="IE=edge">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   
+   <!--======== PERFORMANCE HINTS ========-->
+   <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
+   <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
+
+   <!--======== CSS ========-->
+   <link rel="preload" href="./assets/css/style.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+   <noscript><link rel="stylesheet" href="./assets/css/style.css"></noscript>
+   <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+   <link rel="stylesheet" href="./assets/css/fontawesome.min.css">
+   <link rel="stylesheet" href="./assets/css/slick-min.css">
+
+
+   <!--======== TITLE ICON ========-->
+   <link rel="shortcut icon" href="./assets/img/fav.png" type="image/x-icon">
+   <title>Stellar X - Space Weather Chronicles</title>
+
+   <script type="importmap">
+      {
+         "imports": {
+            "three": "./assets/js/three.module.js",
+            "jsm/": "https://cdn.jsdelivr.net/npm/three@0.161/examples/jsm/"
+         }
+      }
+   </script>
+</head>
+
+<body>
+
+
+   <!--======== PRELOADER ========-->
+   <div class="preloader">
+      <!-- Loader -->
+      <div class="blobs">
+         <div class="blob-center"></div>
+         <div class="blob"></div>
+         <div class="blob"></div>
+         <div class="blob"></div>
+         <div class="blob"></div>
+         <div class="blob"></div>
+         <div class="blob"></div>
+      </div>
+      <svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+         <defs>
+            <filter id="goo">
+               <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur" />
+               <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 18 -7"
+                  result="goo" />
+               <feBlend in="SourceGraphic" in2="goo" />
+            </filter>
+         </defs>
+      </svg>
+   </div>
+   <!--======== PRELOADER // ========-->
+
+   <!--======== HEADER REMOVED ========-->
+
+   <!--======== MAIN BODY ========-->
+   <main>
+
+      <!--======== HERO AREA ========-->
+      <section class="hero-area overflow-hidden" id="home">
+         <div class="parallax-imgs position-absolute z-n1 w-100 h-100 section-overlay d-flex">
+            <video class="hero-video" autoplay muted loop playsinline preload="metadata" poster="assets/img/space/galaxy-background.jpg">
+               <source src="assets/video/225937.mp4" type="video/mp4">
+               <div class="bg-attachment w-100" style="background-image: url(assets/img/space/galaxy-background.jpg);"></div>
+            </video>
+         </div>
+         <div class="container">
+            <div class="hero-content">
+               <!-- WELCOME TEXT -->
+               <div class="text-center hero-text">
+                  <h1 class="text-white text-center text-uppercase mb-2" style="letter-spacing: .1em;">Stellar X</h1>
+                  <h2 class="text-white text-center fw-normal">Let's Learn About the Space Weather Elements</h2>
+                  <button class="btn explore-btn glowing-btn mt-4"><span>Explore Space Weather Elements</span></button>
+               </div>
+
+               <!-- GLOBE -->
+               <div class="globe">
+               </div>
+
+               <!-- SYSTEM VIDEO -->
+               <div class="system-globe">
+                  <h2 class="text-white text-center">Stellar Phenomena & Space Weather Systems</h2>
+                  <video class="lazy-video" muted loop loading="lazy" preload="none" data-autoplay="true">
+                     <source src="./assets/video/earth-system-transparent.webm" type="video/webm">
+                  </video>
+               </div>
+
+
+
+               <!-- FEATURE TAB -->
+               <div class="feature-tabs">
+
+                  <!-- SYSTEM -->
+                  <div class="feature-tab">
+
+                        <div class="system-list">
+                        <div class="row g-5">
+                           <div class="col-md-12">
+                              <div class="system-list-item">
+                                 <h4 class="text-white">CME</h4>
+                                 <div class="system-img">
+                                    <img src="./assets/img/space/cme.png" alt="Coronal Mass Ejection" loading="lazy">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="system-list-item">
+                                 <h4 class="text-white">Solar Flare</h4>
+                                 <div class="system-img">
+                                    <img src="./assets/img/space/solar-flare.png" alt="Solar Flare" loading="lazy">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="system-list-item">
+                                 <h4 class="text-white">Solar Wind</h4>
+                                 <div class="system-img">
+                                    <img src="./assets/img/space/solar-wind.png" alt="Solar Wind" loading="lazy">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-md-12">
+                              <div class="system-list-item">
+                                 <h4 class="text-white">Aurora</h4>
+                                 <div class="system-img">
+                                    <img src="./assets/img/space/aurora.png" alt="Aurora" loading="lazy">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+
+                     <div class="system-tabs">
+
+                        <div class="system-tab text-white">
+                           <ul class="system-inner-tab-links mb-4">
+                              <li class="active"><button class="btn">Details</button></li>
+                              <li><button class="btn">Gallery</button></li>
+                           </ul>
+                           <div class="system-inner-tabs">
+                              <div class="system-inner-tab active">
+                                 <div class="row g-4 align-items-center">
+                                    <div class="col-md-7">
+                                       <video class="rounded-4" muted autoplay loop>
+                                          <source src="./assets/video/atm.mp4" type="video/mp4">
+                                       </video>
+                                    </div>
+                                    <div class="col-md-5">
+                                       <h3 class="text-uppercase text-white">CME</h3>
+                                       <h5 class="text-white fw-normal">Coronal Mass Ejections are massive bursts of solar wind and magnetic fields rising above the solar corona or being released into space, capable of causing significant space weather effects.</h5>
+                                    </div>
+                                    <div class="col-md-12">
+                                       <h5 class="text-white">Key characteristics of CMEs:
+                                       </h5>
+
+                                       <ul>
+                                          <li>
+                                             <p class="mb-2"><b>1. Massive Plasma Ejection:</b> CMEs release billions of tons of plasma and magnetic field into space at speeds up to 3,000 km/s.</p>
+                                          </li>
+                                          <li>
+                                             <p class="mb-2"><b>2. Magnetic Field Disruption:</b> They carry twisted magnetic field lines that can interact with Earth's magnetosphere.</p>
+                                          </li>
+                                          <li>
+                                             <p class="mb-2"><b>3. Geomagnetic Impact:</b> When directed toward Earth, CMEs can cause severe geomagnetic storms and aurora displays.</p>
+                                          </li>
+                                          <li>
+                                             <p class="mb-2"><b>4. Technology Effects:</b> Can disrupt satellite operations, GPS systems, and power grids on Earth.</p>
+                                          </li>
+                                          <li>
+                                             <p class="mb-2"><b>5. Solar Cycle Correlation:</b> CME frequency varies with the 11-year solar cycle, peaking during solar maximum.</p>
+                                          </li>
+                                       </ul>
+
+                                       <p class="d-flex align-items-center">
+                                          <b class="me-1">Source: </b> <a class="text-link" target="_blank"
+                                             href="https://science.nasa.gov/astrophysics/focus-areas/how-do-stars-form-and-evolve/">
+                                             <img style="width: 2em;" src="./assets/img/nasa.svg" alt="">
+                                             https://science.nasa.gov/astrophysics/focus-areas/how-do-stars-form-and-evolve/
+                                          </a>
+                                       </p>
+
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="system-inner-tab">
+                                 <div class="row row-cols-2 g-4 gallery-item">
+                                    <div class="col">
+                                       <a href="./assets/img/system/Atmosphere/1.jpg"><img class="rounded-4"
+                                             src="./assets/img/system/Atmosphere/1.jpg" alt="" loading="lazy"></a>
+                                    </div>
+                                    <div class="col">
+                                       <a href="./assets/img/system/Atmosphere/3.jpg"><img class="rounded-4"
+                                             src="./assets/img/system/Atmosphere/3.jpg" alt="" loading="lazy"></a>
+                                    </div>
+                                    <div class="col">
+                                        
+                                    </div>
+                                    <div class="col">
+                                        
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="system-tab text-white">
+                           <ul class="system-inner-tab-links mb-4">
+                              <li class="active"><button class="btn">Details</button></li>
+                              <li><button class="btn">Gallery</button></li>
+                           </ul>
+                           <div class="system-inner-tabs">
+                              <div class="system-inner-tab active">
+                                 <div class="row g-4 align-items-center">
+                                    <div class="col-md-7">
+                                       <video class="rounded-4" muted autoplay loop>
+                                          <source src="./assets/video/hyd.mp4" type="video/mp4">
+                                       </video>
+                                    </div>
+                                    <div class="col-md-5">
+                                       <h3 class="text-uppercase text-white">Solar Flare</h3>
+                                       <h5 class="text-white fw-normal">Intense bursts of electromagnetic radiation from the Sun's surface, releasing enormous amounts of energy that can affect Earth's atmosphere and technological systems.</h5>
+                                    </div>
+                                    <div class="col-md-12">
+                                       <p>Solar flares are sudden releases of electromagnetic energy from the Sun's corona, often associated with sunspot activity and magnetic field reconnection.</p>
+                                       <p>They are classified by intensity from A-class (smallest) to X-class (largest), with X-class flares capable of causing radio blackouts and satellite damage.</p>
+                                       <p>Solar flares can disrupt high-frequency radio communications, GPS navigation systems, and pose radiation hazards to astronauts and airline passengers.</p>
+                                       <p>The most powerful flares can trigger geomagnetic storms when their associated particles reach Earth's magnetosphere.</p>
+
+                                       <p class="d-flex align-items-center">
+                                          <b class="me-1">Source: </b> <a class="text-link" target="_blank"
+                                             href="https://www.nasa.gov/solar-flares/">
+                                             <img style="width: 2em;" src="./assets/img/nasa.svg" alt="">
+                                             https://www.nasa.gov/solar-flares/
+                                          </a>
+                                       </p>
+
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="system-inner-tab">
+                                 <div class="row row-cols-2 g-4 gallery-item">
+                                    <div class="col">
+                                       <a href="./assets/img/system/Hydrosphere/1.jpg"><img class="rounded-4"
+                                             src="./assets/img/system/Hydrosphere/1.jpg" alt="" loading="lazy"></a>
+                                    </div>
+                                    <div class="col">
+                                       <a href="./assets/img/system/Hydrosphere/4.jpg"><img class="rounded-4"
+                                             src="./assets/img/system/Hydrosphere/4.jpg" alt="" loading="lazy"></a>
+                                    </div>
+                                    <div class="col">
+                                        
+                                    </div>
+                                    <div class="col">
+                                        
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="system-tab text-white">
+                           <ul class="system-inner-tab-links mb-4">
+                              <li class="active"><button class="btn">Details</button></li>
+                              <li><button class="btn">Gallery</button></li>
+                           </ul>
+                           <div class="system-inner-tabs">
+                              <div class="system-inner-tab active">
+                                 <div class="row g-4 align-items-center">
+                                    <div class="col-md-7">
+                                       <video class="rounded-4" muted autoplay loop>
+                                          <source src="./assets/video/geo.mp4" type="video/mp4">
+                                       </video>
+                                    </div>
+                                    <div class="col-md-5">
+                                       <h3 class="text-uppercase text-white">Solar Storm</h3>
+                                       <h5 class="text-white fw-normal">Major disturbances in space weather caused by solar activity, including solar flares and coronal mass ejections, that can significantly impact Earth's technological infrastructure.</h5>
+                                    </div>
+                                    <div class="col-md-12">
+
+                                       <p>Solar storms are complex space weather events that combine multiple solar phenomena, creating cascading effects throughout the solar system.</p>
+                                       <p>They can cause widespread power grid failures, satellite malfunctions, and complete disruption of radio communications across entire continents.</p>
+                                       <p>Solar storms pose significant risks to astronauts, airline crews, and passengers on polar routes due to increased radiation exposure.</p>
+
+                                       <p class="d-flex align-items-center">
+                                          <b class="me-1">Source: </b> <a class="text-link" target="_blank"
+                                             href="https://www.nasa.gov/solar-storms/">
+                                             <img style="width: 2em;" src="./assets/img/nasa.svg" alt="">
+                                             https://www.nasa.gov/solar-storms/
+                                          </a>
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="system-inner-tab">
+                                 <div class="row row-cols-2 g-4 gallery-item">
+                                    <div class="col">
+                                       <a href="./assets/img/system/GeoSphere/1.jpg"><img class="rounded-4"
+                                             src="./assets/img/system/GeoSphere/1.jpg" alt="" loading="lazy"></a>
+                                    </div>
+                                    <div class="col">
+                                       <a href="./assets/img/system/GeoSphere/2.jpg"><img class="rounded-4"
+                                             src="./assets/img/system/GeoSphere/2.jpg" alt="" loading="lazy"></a>
+                                    </div>
+                                    <div class="col">
+                                        
+                                    </div>
+                                    <div class="col">
+                                        
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                        <div class="system-tab text-white">
+                           <ul class="system-inner-tab-links mb-4">
+                              <li class="active"><button class="btn">Details</button></li>
+                              <li><button class="btn">Gallery</button></li>
+                           </ul>
+                           <div class="system-inner-tabs">
+                              <div class="system-inner-tab active">
+                                 <div class="row g-4 align-items-center">
+                                    <div class="col-md-7">
+                                       <video class="rounded-4" muted autoplay loop>
+                                          <source src="./assets/video/bio.mp4" type="video/mp4">
+                                       </video>
+                                    </div>
+                                    <div class="col-md-5">
+                                       <h3 class="text-uppercase text-white">Aurora</h3>
+                                       <h5 class="text-white fw-normal">Spectacular natural light displays in polar skies caused by charged particles from the solar wind interacting with Earth's magnetic field and atmosphere, creating breathtaking curtains of colored light.</h5>
+                                    </div>
+                                    <div class="col-md-12">
+                                       <p>Auroras occur when charged particles from the solar wind are guided by Earth's magnetic field lines into the upper atmosphere, where they collide with gas molecules and create luminous displays.</p>
+                                       <p>The colors of auroras depend on the type of gas molecules and altitude: oxygen produces green and red lights, while nitrogen creates blue and purple hues.</p>
+                                       <p>Aurora Borealis (Northern Lights) and Aurora Australis (Southern Lights) are most commonly visible in polar regions but can extend to lower latitudes during intense geomagnetic storms.</p>
+                                       <p>These magnificent displays have inspired countless myths and legends throughout human history and continue to attract millions of visitors to polar regions each year.</p>
+
+                                       <p class="d-flex align-items-center">
+                                          <b class="me-1">Source: </b> <a class="text-link" target="_blank"
+                                             href="https://www.nasa.gov/aurora/">
+                                             <img style="width: 2em;" src="./assets/img/nasa.svg" alt="">
+                                             https://www.nasa.gov/aurora/
+                                          </a>
+                                       </p>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div class="system-inner-tab">
+                                 <div class="row row-cols-2 g-4 gallery-item">
+                                    <div class="col">
+                                       <a href="./assets/img/system/Biosphere/6.jpeg"><img class="rounded-4"
+                                             src="./assets/img/system/Biosphere/6.jpeg" alt="" loading="lazy"></a>
+                                    </div>
+                                    <div class="col">
+                                       <a href="./assets/img/system/Biosphere/7.jpg"><img class="rounded-4"
+                                             src="./assets/img/system/Biosphere/7.jpg" alt="" loading="lazy"></a>
+                                    </div>
+                                    <div class="col">
+                                        
+                                    </div>
+                                    <div class="col">
+                                        
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+
+                     </div>
+
+                  </div>
+
+
+               
+               </div>
+
+            </div>
+         </div>
+      </section>
+      <!--======== HERO AREA// ========-->
+
+   </main>
+   <!--======== MAIN BODY// ========-->
+
+
+
+   <!--======== ESSENTIAL JS, PLUGIN JS ========-->
+   <script src="./assets/js/jquery-3.7.1.min.js" defer></script>
+   <script src="./assets/js/slick.min.js" defer></script>
+
+   <!--======== CUSTOM JS ========-->
+
+   <script src="./assets/js/main.js" ></script>
+   
+   <!--======== PERFORMANCE OPTIMIZATION ========-->
+   <script>
+   // Lazy loading for background images
+   document.addEventListener('DOMContentLoaded', function() {
+     const lazyBgs = document.querySelectorAll('.lazy-bg');
+     const lazyVideos = document.querySelectorAll('.lazy-video');
+     
+     const bgObserver = new IntersectionObserver((entries) => {
+       entries.forEach(entry => {
+         if (entry.isIntersecting) {
+           const bg = entry.target.dataset.bg;
+           if (bg) {
+             entry.target.style.backgroundImage = `url(${bg})`;
+             entry.target.classList.remove('lazy-bg');
+           }
+           bgObserver.unobserve(entry.target);
+         }
+       });
+     });
+     
+     lazyBgs.forEach(bg => bgObserver.observe(bg));
+     
+     // Lazy loading for videos
+     const videoObserver = new IntersectionObserver((entries) => {
+       entries.forEach(entry => {
+         if (entry.isIntersecting) {
+           const video = entry.target;
+           if (video.dataset.autoplay) {
+             video.autoplay = true;
+             video.play().catch(e => console.log('Video autoplay failed:', e));
+           }
+           videoObserver.unobserve(video);
+         }
+       });
+     });
+     
+     lazyVideos.forEach(video => videoObserver.observe(video));
+     
+     // Defer globe loading until user scrolls to it
+     const globeContainer = document.querySelector('.globe');
+     if (globeContainer) {
+       const globeObserver = new IntersectionObserver((entries) => {
+         entries.forEach(entry => {
+           if (entry.isIntersecting) {
+             import('./assets/js/globe.js').then(() => {
+               console.log('Globe loaded lazily');
+             }).catch(err => {
+               console.error('Failed to load globe:', err);
+             });
+             globeObserver.unobserve(entry.target);
+           }
+         });
+       });
+       globeObserver.observe(globeContainer);
+     }
+   });
+   </script>
+
+</body>
+
+</html>
